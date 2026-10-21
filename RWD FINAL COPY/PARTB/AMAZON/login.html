@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="logo-section">
+                <svg class="amazon-logo-auth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="140" height="40">
+                    <text x="10" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">amazon</text>
+                    <text x="95" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">.in</text>
+                    <path d="M 10 38 Q 100 20 190 38" stroke="#FF9900" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+            
+            <h2>Sign In</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <button type="submit" class="auth-btn">Sign In</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>New to Amazon? <a href="signup.html">Create an account</a></p>
+                <a href="index.html" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Messages -->
+    <div id="alertContainer"></div>
+
+    <script src="utils.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
+

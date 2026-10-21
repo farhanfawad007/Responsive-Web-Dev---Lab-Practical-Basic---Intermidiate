@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ea6ff"/>
+      <stop offset="1" stop-color="#9b59ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <circle cx="1040" cy="170" r="90" fill="rgba(255,255,255,.18)"/>
+  <circle cx="980" cy="230" r="54" fill="rgba(255,255,255,.14)"/>
+  <text x="70" y="170" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800" fill="rgba(255,255,255,.95)">Tech Quick Tips</text>
+  <text x="70" y="240" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" fill="rgba(255,255,255,.9)">Build a YouTube clone UI</text>
+  <rect x="70" y="300" width="280" height="70" rx="16" fill="rgba(0,0,0,.45)"/>
+  <polygon points="185,317 185,353 215,335" fill="#fff"/>
+</svg>
+

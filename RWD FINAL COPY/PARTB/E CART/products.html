@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cart Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">E-Cart</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li>
+                <span id="userInfo" class="user-info" style="display: none;"></span>
+                <button id="loginBtn" class="login-btn" onclick="openLoginModal()">Login</button>
+                <button id="logoutBtn" class="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Products Content -->
+    <h1 class="product-title">Fashionable Bags Collection</h1>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Leather Handbag">
+            <h3>Leather Handbag</h3>
+            <p>Elegant premium handbag</p>
+            <span>₹1,499</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Sling Bag">
+            <h3>Sling Bag</h3>
+            <p>Trendy casual sling bag</p>
+            <span>₹999</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Backpack">
+            <h3>Backpack</h3>
+            <p>Stylish travel backpack</p>
+            <span>₹1,299</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Tote Bag">
+            <h3>Tote Bag</h3>
+            <p>Spacious everyday tote</p>
+            <span>₹1,199</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Mini Bag">
+            <h3>Mini Bag</h3>
+            <p>Compact and stylish</p>
+            <span>₹799</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Office Bag">
+            <h3>Office Bag</h3>
+            <p>Perfect for work</p>
+            <span>₹1,699</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Party Clutch">
+            <h3>Party Clutch</h3>
+            <p>Glamorous design</p>
+            <span>₹899</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Gym Bag">
+            <h3>Gym Bag</h3>
+            <p>Durable sports bag</p>
+            <span>₹1,099</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Travel Duffel">
+            <h3>Travel Duffel</h3>
+            <p>Large travel bag</p>
+            <span>₹1,999</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Crossbody Bag">
+            <h3>Crossbody Bag</h3>
+            <p>Comfortable crossbody</p>
+            <span>₹1,149</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Designer Bag">
+            <h3>Designer Bag</h3>
+            <p>Premium fashion bag</p>
+            <span>₹2,499</span>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/200" alt="Eco Bag">
+            <h3>Eco Bag</h3>
+            <p>Eco-friendly material</p>
+            <span>₹699</span>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

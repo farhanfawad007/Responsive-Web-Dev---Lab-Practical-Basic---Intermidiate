@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Guide - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+<div class="logo">TravelGuide</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="#" id="loginLink">Login</a></li>
+<li><a href="#">Register</a></li>
+<li><a href="booking.html">Book Now</a></li>
+<li><button id="themeToggle" class="theme-toggle" title="Toggle theme">🌓</button></li>
+</ul>
+</nav>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<h2>Login</h2>
+<form id="loginForm">
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" placeholder="Enter your password" required>
+</div>
+<div id="loginError" class="error-message"></div>
+<button type="submit" class="btn">Login</button>
+</form>
+</div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+<h1>Explore the World</h1>
+<p>Your journey begins here</p>
+<a href="booking.html" class="btn">Book Your Trip</a>
+</section>
+
+<!-- Popular Destinations -->
+<section class="destinations">
+<h2>Popular Destinations</h2>
+<div class="destination-grid">
+<div class="card">
+<img src="Screenshot 2026-01-29 031820.png" alt="Paris">
+<h3>Paris</h3>
+<p>The city of love and lights.</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/250" alt="Maldives">
+<h3>Maldives</h3>
+<p>Relax on beautiful beaches.</p>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/250" alt="Dubai">
+<h3>Dubai</h3>
+<p>Luxury and modern wonders.</p>
+</div>
+</div>
+</section>
+
+<!-- Registration Section -->
+<section class="registration">
+<h2>Register With Us</h2>
+<form class="registration-form">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="password" placeholder="Password" required>
+<input type="tel" placeholder="Mobile Number" required>
+<button type="submit" class="btn">Register</button>
+</form>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>About | Contact | Help</p>
+<p>© 2025 Travel Guide</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

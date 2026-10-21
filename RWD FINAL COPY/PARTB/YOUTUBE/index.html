@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Clone — Home</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html" aria-label="Home">
+          <img src="./assets/logo.svg" alt="YouTube" style="height:24px; width:auto;" />
+        </a>
+
+        <div class="search" role="search">
+          <input id="searchInput" type="search" placeholder="Search" aria-label="Search videos" />
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="icon-btn" id="addImagesBtn" type="button" title="Add images">
+            Add Images
+          </button>
+          <button class="icon-btn" id="clearImagesBtn" type="button" title="Remove all images">
+            Clear Images
+          </button>
+          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme">
+            Theme
+          </button>
+          <button class="icon-btn" id="logoutBtn" type="button" title="Logout">Logout</button>
+        </div>
+      </div>
+
+      <div class="pillbar" aria-label="Categories">
+        <button class="pill" data-category="All" aria-pressed="true" type="button">All</button>
+        <button class="pill" data-category="Entertainment" aria-pressed="false" type="button">Entertainment</button>
+      </div>
+      <div style="height:12px;"></div>
+    </header>
+
+    <div class="container">
+      <div class="layout">
+        <aside class="sidebar">
+          <nav class="nav panel" aria-label="Sidebar">
+            <a class="active" href="./index.html"><b>Home</b></a>
+            <a href="./index.html#trending">Trending <small>(demo)</small></a>
+            <a href="./index.html#subscriptions">Subscriptions</a>
+            <a href="./index.html#library">Library <small>(demo)</small></a>
+            <hr style="border:none;border-top:1px solid var(--border); width:100%; margin: 8px 0;" />
+            <a href="./index.html#saved">Saved</a>
+            <a href="./index.html#liked">Liked</a>
+          </nav>
+        </aside>
+
+        <main>
+          <div id="resultsMeta" style="color:var(--muted); font-size:12px; margin-bottom:10px;"></div>
+          <section class="grid" id="videoGrid" aria-label="Video grid"></section>
+        </main>
+      </div>
+    </div>
+
+    <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+    <input id="imagePicker" class="hidden" type="file" accept="image/*" multiple />
+
+    <script src="./scripts/storage.js"></script>
+    <script src="./scripts/theme.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/uploader.js"></script>
+  </body>
+</html>
+

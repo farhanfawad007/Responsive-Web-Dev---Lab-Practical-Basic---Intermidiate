@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cart Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">E-Cart</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li>
+                <span id="userInfo" class="user-info" style="display: none;"></span>
+                <button id="loginBtn" class="login-btn" onclick="openLoginModal()">Login</button>
+                <button id="logoutBtn" class="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-btn" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Home Content -->
+    <div class="home-container">
+        <div class="home-card">
+            <h1 class="logo">E-Cart</h1>
+            <h2>Welcome to E-Cart</h2>
+            <p>Your one-stop destination for stylish and fashionable bags. Discover premium quality products at unbeatable prices.</p>
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

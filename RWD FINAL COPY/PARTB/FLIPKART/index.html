@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Online Shopping Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="logo-text">Flipkart</span>
+                    <div class="logo-bag">
+                        <div class="bag-handle"></div>
+                        <span class="bag-f">f</span>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more" class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="header-actions">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <button class="cart-btn" id="cartBtn">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal-content">
+            <span class="close" id="closeCartModal">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-empty" id="cartEmpty">
+                <p>Your cart is empty!</p>
+                <p>Add items to your cart to see them here.</p>
+            </div>
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <div class="cart-total">
+                    <strong>Total: ₹<span id="cartTotal">0</span></strong>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Info (shown after login) -->
+    <div class="user-info" id="userInfo" style="display: none;">
+        <div class="container">
+            <span>Welcome, <strong id="userEmail"></strong></span>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Featured Products</h1>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Flipkart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

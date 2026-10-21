@@ -1,0 +1,93 @@
+3.css
+/* General Reset */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body {
+font-family: Arial, sans-serif;
+ line-height: 1.6;
+}
+/* Navigation Bar using Flexbox */
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #333;
+ padding: 1rem;
+}
+.navbar .logo {
+ color: white;
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+.nav-links {
+ list-style: none;
+ display: flex;
+ gap: 1.5rem;
+}
+.nav-links a {
+ color: white;
+ text-decoration: none;
+ transition: color 0.3s ease;
+}
+/* Hover effect */
+.nav-links a:hover {
+ color: yellow;
+}
+/* Hero Section */
+.hero {
+ text-align: center;
+ padding: 2rem;
+ background: #f4f4f4;
+}
+.hero h1 {
+ font-size: 2rem;
+ margin-bottom: 0.5rem;
+}
+/* Portfolio Grid Layout */
+.portfolio {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1rem;
+ padding: 2rem;
+}
+.card {
+ background: #ddd;
+ padding: 2rem;
+ text-align: center;
+ border-radius: 8px;
+ transition: transform 0.3s ease;
+}
+/* Hover effect on cards */
+.card:hover {
+ transform: scale(1.05);
+ background: #ccc;
+}
+/* Footer */
+footer {
+ text-align: center;
+ padding: 1rem;
+ background: #333;
+ color: white;
+ margin-top: 1rem;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+ .portfolio {
+ grid-template-columns: repeat(2, 1fr);
+ }
+ .nav-links {
+ flex-direction: column;
+ gap: 0.5rem;
+ }
+}
+@media (max-width: 480px) {
+ .portfolio {
+ grid-template-columns: 1fr;
+ }
+ .hero h1 {
+font-size: 1.5rem;
+ }
+}

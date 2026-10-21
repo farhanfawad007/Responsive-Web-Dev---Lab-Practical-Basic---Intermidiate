@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#031b2e"/>
+      <stop offset="1" stop-color="#13b0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="760" y="390" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="900" fill="rgba(255,255,255,.92)">WAR</text>
+  <text x="1020" y="390" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="900" fill="#ffd54d">2</text>
+  <text x="760" y="450" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="800" fill="rgba(0,0,0,.55)">HINDI &amp; TAMIL • poster</text>
+  <rect x="760" y="470" width="430" height="10" rx="5" fill="rgba(0,0,0,.25)"/>
+</svg>
+

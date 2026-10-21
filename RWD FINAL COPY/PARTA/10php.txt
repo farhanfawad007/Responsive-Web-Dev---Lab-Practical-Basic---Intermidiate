@@ -1,0 +1,85 @@
+<?php
+session_start();
+
+/* ---------- Handle Logout ---------- */
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    setcookie("user", "", time() - 3600, "/"); // Expire cookie
+    header("Location: 10.php");
+    exit();
+}
+
+/* ---------- Handle Login ---------- */
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Simple check (demo purpose only)
+    if ($email == "test@example.com" && $password == "123456") {
+        $_SESSION['email'] = $email;
+        setcookie("user", $email, time() + 3600, "/"); // Cookie valid for 1 hour
+        header("Location: 10.php");
+        exit();
+    } else {
+        $error = "Invalid login!";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Superglobals Demo</title>
+</head>
+
+<body>
+
+    <h2>PHP Superglobals, Session, and Cookie Demo</h2>
+
+    <!-- Example of GET -->
+    <p>
+        <a href="10.php?name=Student">Click here with GET</a>
+    </p>
+
+    <?php
+    /* ---------- Display GET Value ---------- */
+    if (isset($_GET['name'])) {
+        echo "Hello, " . htmlspecialchars($_GET['name']) . "!<br>";
+    }
+
+    /* ---------- Display Cookie Value ---------- */
+    if (isset($_COOKIE['user'])) {
+        echo "Cookie says: Welcome back, " . $_COOKIE['user'] . "!<br>";
+    }
+
+    /* ---------- Session Check ---------- */
+    if (isset($_SESSION['email'])) {
+        echo "You are logged in as: " . $_SESSION['email'] . "<br>";
+        echo "<a href='10.php?logout=true'>Logout</a>";
+    } else {
+
+        // Show error if login failed
+        if (isset($error)) {
+            echo "<p style='color:red;'>$error</p>";
+        }
+    ?>
+
+        <h3>Login Form</h3>
+        <form method="post" action="">
+            Email:
+            <input type="text" name="email"><br><br>
+
+            Password:
+            <input type="password" name="password"><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+
+    <?php
+    }
+    ?>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Registration Form</title>
+</head>
+<body bgcolor="lightblue">
+<h2><center>Event Registration Form</center></h2>
+<form>
+<fieldset>
+<legend>Personal Details</legend>
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your name"
+required><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Enter your Mail"
+required><br><br>
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="10" max="100"
+required><br><br>
+<label for="gender">Gender:</label>
+<select id="gender" name="gender">
+<option value="">--Select--</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select><br><br>
+</fieldset>
+<fieldset>
+<legend>Event Details</legend>
+<label for="event">Choose Event:</label>
+<select id="event" name="event" required>
+<option value="">--Select Event--</option>
+<option value="coding">Coding Competition</option>
+<option value="debate">Debate</option>
+<option value="sports">Sports</option>
+</select><br><br>
+<label>Interests:</label><br>
+<input type="checkbox" name="interest" value="music"> Music<br>
+<input type="checkbox" name="interest" value="art"> Art<br>
+<input type="checkbox" name="interest" value="tech"> Technology<br><br>
+</fieldset>
+<br>
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

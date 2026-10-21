@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            padding: 40px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f56;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Login Form</h2>
+
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        const form = document.getElementById("loginForm");
+
+        form.onsubmit = function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            let valid = true;
+
+            // Email validation
+            if (!email.includes("@")) {
+                alert("Email must contain '@'.");
+                valid = false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                valid = false;
+            }
+
+            // If valid, show success message
+            if (valid) {
+                alert("Login Successful!");
+                form.reset();
+            }
+        };
+    </script>
+
+</body>
+</html>

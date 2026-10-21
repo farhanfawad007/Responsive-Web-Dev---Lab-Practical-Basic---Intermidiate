@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1dd1a1"/>
+      <stop offset="1" stop-color="#10ac84"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <text x="70" y="160" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="900" fill="rgba(255,255,255,.95)">Daily News</text>
+  <text x="70" y="235" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" fill="rgba(255,255,255,.92)">Headlines in 5 minutes</text>
+  <rect x="70" y="290" width="520" height="280" rx="24" fill="rgba(255,255,255,.16)"/>
+  <rect x="100" y="330" width="460" height="20" rx="10" fill="rgba(255,255,255,.5)"/>
+  <rect x="100" y="370" width="420" height="20" rx="10" fill="rgba(255,255,255,.35)"/>
+  <rect x="100" y="410" width="440" height="20" rx="10" fill="rgba(255,255,255,.35)"/>
+  <rect x="100" y="450" width="350" height="20" rx="10" fill="rgba(255,255,255,.28)"/>
+</svg>
+

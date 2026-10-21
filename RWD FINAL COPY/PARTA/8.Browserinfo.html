@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #125ca1;
+        }
+
+        #info {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Browser Information</h2>
+
+    <button onclick="showInfo()">Show Browser Info</button>
+
+    <div id="info"></div>
+
+    <script>
+        function showInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const browser = navigator.userAgent;
+            const language = navigator.language;
+            const historyLength = history.length;
+            const currentURL = window.location.href;
+
+            const info = `
+                <strong>Window Size:</strong> ${width} × ${height}<br><br>
+                <strong>Browser Info:</strong> ${browser}<br><br>
+                <strong>Language:</strong> ${language}<br><br>
+                <strong>History Length:</strong> ${historyLength}<br><br>
+                <strong>Current URL:</strong> ${currentURL}
+            `;
+
+            document.getElementById("info").innerHTML = info;
+        }
+    </script>
+
+</body>
+</html>
